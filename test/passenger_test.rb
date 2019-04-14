@@ -20,4 +20,11 @@ class PassengerTest < Minitest::Test
     assert @charlie.adult?
     refute @taylor.adult?
   end
+
+  def test_it_can_be_a_driver
+    refute @charlie.driver?
+
+    @charlie.drive
+    assert @charlie.driver?
+  end
 end
