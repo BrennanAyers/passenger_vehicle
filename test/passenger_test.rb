@@ -15,4 +15,9 @@ class PassengerTest < Minitest::Test
     assert_equal "Charlie", @charlie.name
     assert_equal 18, @charlie.age
   end
+
+  def test_it_can_check_if_its_an_adult
+    assert @charlie.adult?
+    refute @taylor.adult?
+  end
 end
