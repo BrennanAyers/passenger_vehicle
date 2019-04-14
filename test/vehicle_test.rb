@@ -14,4 +14,11 @@ class VehicleTest < Minitest::Test
     assert_equal "Honda", @vehicle.make
     assert_equal "Civic", @vehicle.model
   end
+
+  def test_it_knows_if_its_speeding
+    refute @vehicle.speeding?
+
+    @vehicle.speed
+    assert @vehicle.speeding?
+  end
 end
