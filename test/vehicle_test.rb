@@ -21,4 +21,8 @@ class VehicleTest < Minitest::Test
     @vehicle.speed
     assert @vehicle.speeding?
   end
+
+  def test_it_starts_with_no_passengers
+    assert_empty @vehicle.passengers
+  end
 end
