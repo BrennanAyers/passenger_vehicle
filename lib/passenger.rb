@@ -8,5 +8,6 @@ class Passenger
 
   def adult?
     true if age >= 18
+    false if age < 18
   end
 end
